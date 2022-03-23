@@ -4,6 +4,7 @@ import babel from '@rollup/plugin-babel';
 import pkg from './package.json';
 
 const input = ['src/index.js'];
+const pkgName = pkg.name.split('/')[1];
 
 export default [
   {
@@ -17,7 +18,7 @@ export default [
       terser(),
     ],
     output: {
-      file: `lib/${pkg.name}.min.js`,
+      file: `lib/${pkgName}.min.js`,
       format: 'umd',
       name: 'commlandMobile', // this is the name of the global object
       esModule: false,
