@@ -1,12 +1,13 @@
 {
   "name": "@dfhernandez/test-dielectric-js-sdk",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
   "files": [
     "bin",
     "build",
-    "lib"
+    "lib",
+    "dist"
   ],
   "scripts": {
     "build": "rollup -c",
