@@ -24,6 +24,11 @@ export default [
       exports: 'named',
       sourcemap: true,
     },
+    external: [
+      '@capacitor/core',
+      '@capacitor/browser',
+      '@capacitor/geolocation',
+    ],
   },
   // ESM and CJS
   {
