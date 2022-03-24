@@ -1,6 +1,6 @@
 {
   "name": "@dfhernandez/test-dielectric-js-sdk",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
   "files": [
