@@ -29,17 +29,18 @@ export default [
       esModule: false,
       exports: 'named',
       sourcemap: true,
-      globals: {
-        '@capacitor/core': '@capacitor/core',
-        '@capacitor/browser': '@capacitor/browser',
-        '@capacitor/gps': '@capacitor/gps',
-      },
+      inlineDynamicImports: true,
+      // globals: {
+      //   '@capacitor/core': '@capacitor/core',
+      //   '@capacitor/browser': '@capacitor/browser',
+      //   '@capacitor/gps': '@capacitor/gps',
+      // },
     },
-    external: [
-      '@capacitor/core',
-      '@capacitor/browser',
-      '@capacitor/geolocation',
-    ],
+    // external: [
+    //   '@capacitor/core',
+    //   '@capacitor/browser',
+    //   '@capacitor/geolocation',
+    // ],
   },
   // ESM and CJS
   {
