@@ -1,6 +1,7 @@
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import { terser } from 'rollup-plugin-terser';
 import babel from '@rollup/plugin-babel';
+import commonjs from '@rollup/plugin-commonjs';
 import pkg from './package.json';
 
 const input = ['src/index.js'];
@@ -16,6 +17,10 @@ export default [
         babelHelpers: 'bundled',
       }),
       terser(),
+      commonjs({
+        include: 'node_modules/**',
+        exclude: '**/*.css',
+      }),
     ],
     output: {
       file: `lib/${pkgName}.min.js`,
@@ -24,6 +29,11 @@ export default [
       esModule: false,
       exports: 'named',
       sourcemap: true,
+      globals: {
+        '@capacitor/core': '@capacitor/core',
+        '@capacitor/browser': '@capacitor/browser',
+        '@capacitor/gps': '@capacitor/gps',
+      },
     },
     external: [
       '@capacitor/core',
